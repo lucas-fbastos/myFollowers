@@ -15,6 +15,9 @@ class UserDataController extends Controller
 
     public function getData(Request $request){
         $user = $request->username;
+        if(!issert($user)){
+            return view('userNotFound');
+        }
         $userJson = InstagramService::requestUserData($user);
         if($userJson!=null){
             $userJson = json_decode(json_encode($userJson), FALSE);

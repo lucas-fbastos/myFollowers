@@ -90,7 +90,7 @@ background: linear-gradient(90deg, rgba(120,115,205,1) 0%, rgba(119,119,224,1) 9
                     </div>
                     <input class=" form-control my-0 py-1 border-primary text-center 
                         titleBrandInput col-12" type="text" name="username" 
-                        placeholder="Username here!" aria-label="Search">
+                        placeholder="Username here!" required aria-label="Search">
                 </div>
                 <button type="submit" class=" animated slideInRight 
                         mt-4 btn btn-block col-8 col-md-6 mx-auto btn-primary">
