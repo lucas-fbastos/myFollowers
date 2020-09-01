@@ -15,7 +15,7 @@ class UserDataController extends Controller
 
     public function getData(Request $request){
         $user = $request->username;
-        if(!issert($user)){
+        if($user == null){
             return view('userNotFound');
         }
         $userJson = InstagramService::requestUserData($user);
@@ -60,7 +60,8 @@ class UserDataController extends Controller
             $userJson = json_decode(json_encode($userJson), FALSE);
             return view('userData', compact('userJson'));
         }else{
-            return view('userNotFound');
+            dd($user);die();
+            //return view('userNotFound');
         }
     }
 }
